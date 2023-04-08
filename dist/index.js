@@ -41,10 +41,14 @@ class Player {
 
 //inheritance
 class AdminPlayer extends Player {
+        constructor(first, last, powers){
+            super(first, last); //references the parent class Player constructor
+            this.powers = powers;
+        }
     isAdmin = true;
 }
 
-const admin = new AdminPlayer()
+const admin = new AdminPlayer(["delete", "restore world"])
 
 //const player1 = new Player("blue", "steele");
 // console.log(player1.first);
