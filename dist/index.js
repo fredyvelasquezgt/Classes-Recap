@@ -1,4 +1,5 @@
 class Player {
+    static description = "Player In Our Game";
     #score = 0;
     numLives = 10;
     constructor(first, last) {
@@ -6,12 +7,24 @@ class Player {
         this.last = last;
         this.#secret();
     }
+    static randomPlayer() {
+        return new Player("Andy", "Fredy",)
+    }
     get fullName() {
         return `${this.first} ${this.last}`
     }
     get score() {
         return this.#score
     }
+
+    set score(newScore) {
+        if(newScore<0) {
+            throw new Error("Score must be positive")
+        }
+        this.#score = newScore;
+    }
+
+
     updateScore(newScore) {
         this.#score = newScore;
     }
@@ -38,5 +51,10 @@ const player1 = new Player("blue", "steele");
 // console.log(player1.getScore())
 
 console.log(player1.score);
+player1.score = 432;
+console.log(player1.score)
 // const player2 = new Player("charlie", "brown");
 // console.log(player2);
+
+
+p
