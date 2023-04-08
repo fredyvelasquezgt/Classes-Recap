@@ -7,7 +7,7 @@ class Player {
         this.last = last;
         this.#secret();
     }
-    static randomPlayer() {
+    static randomPlayer() { //solo existe en la clase por si misma
         return new Player("Andy", "Fredy",)
     }
     get fullName() {
@@ -39,7 +39,14 @@ class Player {
     }
 }
 
-const player1 = new Player("blue", "steele");
+//inheritance
+class AdminPlayer extends Player {
+    isAdmin = true;
+}
+
+const admin = new AdminPlayer()
+
+//const player1 = new Player("blue", "steele");
 // console.log(player1.first);
 // console.log(player1.last);
 // console.log(player1)
