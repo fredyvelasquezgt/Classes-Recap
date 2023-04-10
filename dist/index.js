@@ -7,3 +7,4 @@ class Player {
     }
 }
 const elton = new Player("elton", "steele");
+elton.score;
