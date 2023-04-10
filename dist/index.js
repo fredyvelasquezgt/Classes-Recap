@@ -56,6 +56,7 @@ class Jacket {
     }
 }
 const bike1 = new Bike("red");
+const jacket1 = new Jacket("Prada", "black");
 const elton = new Player("elton", "steele", 121);
 elton.fullName;
 elton.score = 99;

@@ -55,6 +55,10 @@ interface Colorful {
     color:string;
 }
 
+interface Printable {
+    print():void;
+}
+
 class Bike implements Colorful {
     constructor(public color: string) {
 
@@ -68,6 +72,8 @@ class Jacket implements Colorful {
 }
 
 const bike1 = new Bike("red")
+
+const jacket1 = new Jacket("Prada", "black")
 
 
 const elton = new Player("elton", "steele", 121)
