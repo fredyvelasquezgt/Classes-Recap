@@ -88,8 +88,11 @@ abstract class Employee {
 }
 
 class FullTimeEmployee extends Employee {
+    constructor(first: string, last:string, private salary:number) {
+        super(first, last)
+    }
     getPay():number {
-        return 13;
+        return this.salary;
     }
 }
 
@@ -98,6 +101,14 @@ class PartTimeEmployee extends Employee {
         return 13212;
     }
 }
+
+
+
+
+
+
+
+
 
 
 const bike1 = new Bike("red")

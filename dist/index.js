@@ -72,8 +72,12 @@ class Employee {
     }
 }
 class FullTimeEmployee extends Employee {
+    constructor(first, last, salary) {
+        super(first, last);
+        this.salary = salary;
+    }
     getPay() {
-        return 13;
+        return this.salary;
     }
 }
 class PartTimeEmployee extends Employee {
