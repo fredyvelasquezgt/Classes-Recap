@@ -27,7 +27,13 @@ class Player {
     get score() {
         return this._score;
     }
+    set score(newScore) {
+        if (newScore < 0) {
+            throw new Error("Score cannot be negative");
+        }
+        this._score = newScore;
+    }
 }
 const elton = new Player("elton", "steele", 121);
 elton.fullName;
-elton.score;
+elton.score = 99;
