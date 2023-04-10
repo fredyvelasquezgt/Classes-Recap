@@ -55,6 +55,20 @@ interface Colorful {
     color:string;
 }
 
+class Bike implements Colorful {
+    constructor(public color: string) {
+
+    }
+}
+
+class Jacket implements Colorful {
+    constructor(public brand: string, public color:string) {
+
+    }
+}
+
+const bike1 = new Bike("red")
+
 
 const elton = new Player("elton", "steele", 121)
 elton.fullName;

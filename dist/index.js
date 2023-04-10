@@ -44,6 +44,18 @@ class SuperPlayer extends Player {
         this._score = 9999;
     }
 }
+class Bike {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Jacket {
+    constructor(brand, color) {
+        this.brand = brand;
+        this.color = color;
+    }
+}
+const bike1 = new Bike("red");
 const elton = new Player("elton", "steele", 121);
 elton.fullName;
 elton.score = 99;
