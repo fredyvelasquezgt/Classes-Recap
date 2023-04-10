@@ -1,12 +1,13 @@
 "use strict";
-var _Player_score;
 class Player {
     constructor(first, last) {
-        _Player_score.set(this, 0);
+        this.score = 0;
         this.first = first;
         this.last = last;
     }
+    secretMethod() {
+        console.log('secret method');
+    }
 }
-_Player_score = new WeakMap();
 const elton = new Player("elton", "steele");
 elton.score;
