@@ -5,3 +5,4 @@ class Player {
         this.last = last;
     }
 }
+const elton = new Player("elton", "steele");
