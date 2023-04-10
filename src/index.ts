@@ -25,9 +25,13 @@ class Player {
     private secretMethod():void {
         console.log('secret method')
     }
+
+    get fullName(): string {
+        return `${this.first} ${this.last}`
+    }
 }
 
 
 const elton = new Player("elton", "steele", 121)
-
+elton.fullName = "asdfd"
 
