@@ -76,8 +76,27 @@ class Jacket implements Colorful, Printable {
 }
 
 //con abstract no puedo crear instancias
-abstract class Cat {
+//puedo definir metodos que deben de existir en las sub classes
+//una interface solo describe la shape, pero la abstract es hibrida, tambien puede hacer cosas
+// la abstract agrega funcionalidad
+abstract class Employee {
+    constructor(public first:string, public last:string) {}
+    abstract getPay(): number;
+    greet() {
+        console.log('hello!')
+    }
+}
 
+class FullTimeEmployee extends Employee {
+    getPay():number {
+        return 13;
+    }
+}
+
+class PartTimeEmployee extends Employee {
+    getPay():number {
+        return 13212;
+    }
 }
 
 

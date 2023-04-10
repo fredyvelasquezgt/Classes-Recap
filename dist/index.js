@@ -59,7 +59,27 @@ class Jacket {
     }
 }
 //con abstract no puedo crear instancias
-class Cat {
+//puedo definir metodos que deben de existir en las sub classes
+//una interface solo describe la shape, pero la abstract es hibrida, tambien puede hacer cosas
+// la abstract agrega funcionalidad
+class Employee {
+    constructor(first, last) {
+        this.first = first;
+        this.last = last;
+    }
+    greet() {
+        console.log('hello!');
+    }
+}
+class FullTimeEmployee extends Employee {
+    getPay() {
+        return 13;
+    }
+}
+class PartTimeEmployee extends Employee {
+    getPay() {
+        return 13212;
+    }
 }
 const bike1 = new Bike("red");
 const jacket1 = new Jacket("Prada", "black");
