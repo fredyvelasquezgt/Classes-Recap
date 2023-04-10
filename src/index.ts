@@ -51,6 +51,10 @@ class SuperPlayer extends Player {
     }
 }
 
+interface Colorful {
+    color:string;
+}
+
 
 const elton = new Player("elton", "steele", 121)
 elton.fullName;
