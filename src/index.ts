@@ -15,14 +15,14 @@
 // }
 
 class Player {
-    
+
     //private score: number =0; //solo es accesible dentro de la clase y no desde afuera
 
-    constructor(public first:string, public last: string, private _score: number) {
+    constructor(public first: string, public last: string, private _score: number) {
 
     }
 
-    private secretMethod():void {
+    private secretMethod(): void {
         console.log('secret method')
     }
 
@@ -30,12 +30,12 @@ class Player {
         return `${this.first} ${this.last}`
     }
 
-    get score():number{
+    get score(): number {
         return this._score
     }
 
-    set score(newScore: number){
-        if(newScore < 0) {
+    set score(newScore: number) {
+        if (newScore < 0) {
             throw new Error("Score cannot be negative")
         }
         this._score = newScore;
