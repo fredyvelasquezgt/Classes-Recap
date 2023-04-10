@@ -13,10 +13,10 @@
 // }
 class Player {
     //private score: number =0; //solo es accesible dentro de la clase y no desde afuera
-    constructor(first, last, score) {
+    constructor(first, last, _score) {
         this.first = first;
         this.last = last;
-        this.score = score;
+        this._score = _score;
     }
     secretMethod() {
         console.log('secret method');
@@ -24,6 +24,10 @@ class Player {
     get fullName() {
         return `${this.first} ${this.last}`;
     }
+    get score() {
+        return this._score;
+    }
 }
 const elton = new Player("elton", "steele", 121);
-elton.fullName = "asdfd";
+elton.fullName;
+elton.score;

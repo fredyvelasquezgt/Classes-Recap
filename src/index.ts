@@ -18,7 +18,7 @@ class Player {
     
     //private score: number =0; //solo es accesible dentro de la clase y no desde afuera
 
-    constructor(public first:string, public last: string, private score: number) {
+    constructor(public first:string, public last: string, private _score: number) {
 
     }
 
@@ -29,9 +29,14 @@ class Player {
     get fullName(): string {
         return `${this.first} ${this.last}`
     }
+
+    get score():number{
+        return this._score
+    }
 }
 
 
 const elton = new Player("elton", "steele", 121)
-elton.fullName = "asdfd"
+elton.fullName;
+elton.score;
 
