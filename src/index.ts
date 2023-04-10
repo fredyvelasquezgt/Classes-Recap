@@ -65,9 +65,13 @@ class Bike implements Colorful {
     }
 }
 
-class Jacket implements Colorful {
+class Jacket implements Colorful, Printable {
     constructor(public brand: string, public color:string) {
+     
+    }
 
+    print() {
+        console.log(`${this.color} ${this.brand} jacket`)
     }
 }
 

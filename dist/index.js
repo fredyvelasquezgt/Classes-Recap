@@ -54,6 +54,9 @@ class Jacket {
         this.brand = brand;
         this.color = color;
     }
+    print() {
+        console.log(`${this.color} ${this.brand} jacket`);
+    }
 }
 const bike1 = new Bike("red");
 const jacket1 = new Jacket("Prada", "black");
