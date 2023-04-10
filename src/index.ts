@@ -18,7 +18,7 @@ class Player {
 
     //private score: number =0; //solo es accesible dentro de la clase y no desde afuera
 
-    constructor(public first: string, public last: string, private _score: number) {
+    constructor(public first: string, public last: string, protected _score: number) {
 
     }
 
@@ -41,6 +41,14 @@ class Player {
         this._score = newScore;
     }
 
+}
+
+//with protected I can access _score
+class SuperPlayer extends Player {
+    public isAdmin: boolean = true;
+    maxScore() {
+        this._score = 9999;
+    }
 }
 
 

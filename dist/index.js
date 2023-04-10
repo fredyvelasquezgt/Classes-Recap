@@ -34,6 +34,16 @@ class Player {
         this._score = newScore;
     }
 }
+//with protected I can access _score
+class SuperPlayer extends Player {
+    constructor() {
+        super(...arguments);
+        this.isAdmin = true;
+    }
+    maxScore() {
+        this._score = 9999;
+    }
+}
 const elton = new Player("elton", "steele", 121);
 elton.fullName;
 elton.score = 99;
