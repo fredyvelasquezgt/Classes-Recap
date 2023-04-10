@@ -81,10 +81,19 @@ class FullTimeEmployee extends Employee {
     }
 }
 class PartTimeEmployee extends Employee {
+    constructor(first, last, hourlyRate, hoursWorked) {
+        super(first, last);
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
+    }
     getPay() {
-        return 13212;
+        return this.hourlyRate * this.hoursWorked;
     }
 }
+const betty = new FullTimeEmployee("betty", "white", 95000);
+console.log(betty.getPay());
+const bill = new PartTimeEmployee("bill", "Billerson", 24, 1100);
+console.log(bill.getPay());
 const bike1 = new Bike("red");
 const jacket1 = new Jacket("Prada", "black");
 const elton = new Player("elton", "steele", 121);

@@ -97,12 +97,19 @@ class FullTimeEmployee extends Employee {
 }
 
 class PartTimeEmployee extends Employee {
+    constructor(first: string, last:string, private hourlyRate: number, private hoursWorked: number) {
+        super(first, last)
+    }
     getPay():number {
-        return 13212;
+        return this.hourlyRate * this.hoursWorked;
     }
 }
 
+const betty = new FullTimeEmployee("betty", "white", 95000)
+console.log(betty.getPay());
 
+const bill = new PartTimeEmployee("bill", "Billerson", 24, 1100);
+console.log(bill.getPay());
 
 
 
