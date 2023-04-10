@@ -58,6 +58,9 @@ class Jacket {
         console.log(`${this.color} ${this.brand} jacket`);
     }
 }
+//con abstract no puedo crear instancias
+class Cat {
+}
 const bike1 = new Bike("red");
 const jacket1 = new Jacket("Prada", "black");
 const elton = new Player("elton", "steele", 121);

@@ -75,6 +75,12 @@ class Jacket implements Colorful, Printable {
     }
 }
 
+//con abstract no puedo crear instancias
+abstract class Cat {
+
+}
+
+
 const bike1 = new Bike("red")
 
 const jacket1 = new Jacket("Prada", "black")
